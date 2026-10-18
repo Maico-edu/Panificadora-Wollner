@@ -108,7 +108,7 @@ export const defaultContent = {
     {
       id: 'bolo-confeitado',
       name: 'Bolo confeitado',
-      description: '',
+      description: 'bolo feito com massa de chocolate, recheio de brigadeiro e cobertura de chantilly, decorado com confeitos coloridos.',
       categoryId: 'bolos',
       image: '/images/seed/bolo-confeitado.jpg',
       priceType: 'consult',
@@ -124,7 +124,7 @@ export const defaultContent = {
     {
       id: 'rocambole-morango',
       name: 'Rocambole de morango',
-      description: '',
+      description: 'rocambole feito com massa de chocolate, recheio de creme e morangos frescos, coberto com chocolate e decorado com morangos.',
       categoryId: 'confeitaria',
       image: '/images/seed/rocambole-morango.jpg',
       priceType: 'consult',
@@ -140,7 +140,7 @@ export const defaultContent = {
     {
       id: 'bomba-chocolate',
       name: 'Bomba de chocolate',
-      description: '',
+      description: 'bomba feita com massa de chocolate, recheio de creme e cobertura de chocolate.',
       categoryId: 'confeitaria',
       image: '/images/seed/bomba-chocolate.jpg',
       priceType: 'consult',
@@ -156,7 +156,7 @@ export const defaultContent = {
     {
       id: 'rosquinha-confeitada',
       name: 'Rosquinha confeitada',
-      description: '',
+      description: 'rosquinha feita com massa de chocolate, recheio de creme e cobertura de chocolate.',
       categoryId: 'doces',
       image: '/images/seed/rosquinha-confeitada.jpg',
       priceType: 'consult',
@@ -172,7 +172,7 @@ export const defaultContent = {
     {
       id: 'cafe-cremoso',
       name: 'Café cremoso',
-      description: '',
+      description: 'café cremoso feito com grãos de café selecionados, servido com leite condensado e canela.',
       categoryId: 'cafes',
       image: '/images/seed/cafe-cremoso.jpg',
       priceType: 'consult',
