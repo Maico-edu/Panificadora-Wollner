@@ -97,7 +97,7 @@ function onBackdropClick(event) {
   max-height: calc(100vh - 24px);
   padding: 0;
   color: var(--ink-900);
-  background: var(--cream-50);
+  background: var(--surface-card);
   border: 0;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -154,14 +154,14 @@ function onBackdropClick(event) {
   padding: 10px 12px;
   font: 400 1rem var(--font-body);
   color: var(--ink-900);
-  background: #fff;
+  background: var(--surface-input);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius);
 }
 .order__preview {
   margin-bottom: 16px;
   padding: 12px 14px;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px dashed var(--gold-500);
   border-radius: var(--radius);
 }

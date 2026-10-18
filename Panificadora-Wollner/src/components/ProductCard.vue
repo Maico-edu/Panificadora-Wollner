@@ -71,7 +71,7 @@ const showImage = computed(() => props.product.image && !imageFailed.value)
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -156,6 +156,9 @@ const showImage = computed(() => props.product.image && !imageFailed.value)
   font-family: var(--font-display);
   font-size: 1.3rem;
   color: var(--wine-800);
+}
+[data-theme='dark'] .card__price--fixed {
+  color: var(--gold-400);
 }
 .card__button {
   width: 100%;

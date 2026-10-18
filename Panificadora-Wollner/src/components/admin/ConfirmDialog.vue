@@ -33,7 +33,7 @@ watch(
   width: min(440px, calc(100vw - 24px));
   padding: 24px;
   color: var(--ink-900);
-  background: #fff;
+  background: var(--surface-card);
   border: 0;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);

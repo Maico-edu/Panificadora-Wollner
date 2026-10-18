@@ -2,6 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AppIcon from './AppIcon.vue'
+import ThemeToggle from './ThemeToggle.vue'
 import { useContent } from '../stores/content.js'
 import { whatsappUrlGeneral } from '../../shared/whatsapp.js'
 
@@ -57,6 +58,8 @@ function onKeydown(event) {
         </a>
       </nav>
 
+      <ThemeToggle />
+
       <button
         type="button"
         class="menu-button"
@@ -95,6 +98,9 @@ function onKeydown(event) {
   text-decoration: none;
   color: var(--wine-900);
 }
+[data-theme='dark'] .brand {
+  color: #fff5ed;
+}
 .brand img {
   width: 48px;
   height: 48px;
@@ -130,8 +136,15 @@ function onKeydown(event) {
   color: var(--ink-700);
   border-bottom: 2px solid transparent;
 }
+[data-theme='dark'] .nav__link {
+  color: var(--ink-700);
+}
 .nav__link:hover {
   color: var(--wine-700);
+}
+[data-theme='dark'] .nav__link:hover,
+[data-theme='dark'] .nav__link.router-link-exact-active {
+  color: var(--gold-400);
 }
 .nav__link.router-link-exact-active {
   color: var(--wine-800);
@@ -152,6 +165,9 @@ function onKeydown(event) {
   border: 1px solid var(--cream-200);
   border-radius: var(--radius);
   cursor: pointer;
+}
+[data-theme='dark'] .menu-button {
+  color: var(--gold-400);
 }
 
 @media (max-width: 920px) {
@@ -185,6 +201,35 @@ function onKeydown(event) {
   .nav__cta {
     margin: 16px 0 0;
     min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__bar {
+    gap: 8px;
+  }
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 8px;
+  }
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+  .brand__text {
+    min-width: 0;
+  }
+  .brand__text strong,
+  .brand__text small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .menu-button {
+    flex: none;
+    width: 42px;
+    height: 42px;
   }
 }
 </style>

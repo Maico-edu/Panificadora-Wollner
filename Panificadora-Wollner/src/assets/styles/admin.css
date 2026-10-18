@@ -2,13 +2,13 @@
 .adm {
   min-height: 100vh;
   color: var(--ink-900);
-  background: #f3eee4;
+  background: var(--cream-100);
 }
 
 .adm-card {
   margin-bottom: 20px;
   padding: 20px;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
 }
@@ -61,8 +61,8 @@
   padding: 9px 12px;
   font: 400 1rem var(--font-body);
   color: var(--ink-900);
-  background: #fff;
-  border: 1px solid #cfc3ab;
+  background: var(--surface-input);
+  border: 1px solid var(--cream-200);
   border-radius: var(--radius);
 }
 .adm-field textarea {
@@ -170,8 +170,8 @@
   width: 40px;
   height: 40px;
   color: var(--ink-700);
-  background: #fff;
-  border: 1px solid #cfc3ab;
+  background: var(--surface-card);
+  border: 1px solid var(--cream-200);
   border-radius: var(--radius);
   cursor: pointer;
 }
@@ -262,6 +262,10 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: #7a2a00;
+}
+
+[data-theme='dark'] .adm-preview strong {
+  color: #75d395;
 }
 
 @media (max-width: 720px) {

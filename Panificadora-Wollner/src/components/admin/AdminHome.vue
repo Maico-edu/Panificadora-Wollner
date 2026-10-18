@@ -202,7 +202,7 @@ function move(index, delta) {
 }
 .slide-card {
   padding: 16px;
-  background: #faf6ec;
+  background: var(--cream-100);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
 }

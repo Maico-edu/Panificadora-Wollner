@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import AppIcon from '../components/AppIcon.vue'
+import ThemeToggle from '../components/ThemeToggle.vue'
 import AdminLogin from '../components/admin/AdminLogin.vue'
 import AdminProducts from '../components/admin/AdminProducts.vue'
 import AdminCategories from '../components/admin/AdminCategories.vue'
@@ -78,6 +79,10 @@ async function leave() {
 
 <template>
   <div class="adm">
+    <ThemeToggle
+      v-if="admin.auth.value !== 'in' && admin.auth.value !== 'out'"
+      class="admin-state-theme"
+    />
     <p v-if="admin.auth.value === 'checking'" class="state" role="status">Carregando painel…</p>
 
     <div v-else-if="admin.auth.value === 'unconfigured'" class="state state--card">
@@ -105,6 +110,7 @@ async function leave() {
             <strong>Painel da Wollner</strong>
             <small>Armazenamento: {{ admin.storage.value.label }}</small>
           </div>
+          <ThemeToggle />
           <RouterLink to="/" class="btn btn--outline btn--small" target="_blank">
             <AppIcon name="external" :size="16" />
             Ver o site
@@ -174,12 +180,18 @@ async function leave() {
   text-align: center;
   color: var(--ink-500);
 }
+.admin-state-theme {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 80;
+}
 .state--card {
   max-width: 520px;
   margin: 12vh auto 0;
   padding: 32px;
   color: var(--ink-900);
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
 }
@@ -194,7 +206,7 @@ async function leave() {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: var(--cream-50);
+  background: var(--surface-card);
   border-bottom: 1px solid var(--cream-200);
 }
 .top__inner {
@@ -245,6 +257,10 @@ async function leave() {
   color: var(--wine-800);
   border-bottom-color: var(--gold-500);
 }
+[data-theme='dark'] .tabs__button:hover,
+[data-theme='dark'] .tabs__button[aria-current='page'] {
+  color: var(--gold-400);
+}
 
 .content {
   max-width: 1040px;
@@ -260,6 +276,10 @@ async function leave() {
   background: #fde2c8;
   border-radius: var(--radius);
 }
+[data-theme='dark'] .alert {
+  color: #ffd0a4;
+  background: #493520;
+}
 
 .savebar {
   position: fixed;
@@ -267,7 +287,7 @@ async function leave() {
   bottom: 0;
   left: 0;
   z-index: 30;
-  background: #fff;
+  background: var(--cream-50);
   border-top: 1px solid var(--cream-200);
   box-shadow: 0 -4px 16px rgba(46, 10, 12, 0.1);
 }
@@ -290,6 +310,9 @@ async function leave() {
 }
 .savebar__status--dirty {
   color: #9a4a00;
+}
+[data-theme='dark'] .savebar__status--dirty {
+  color: var(--gold-400);
 }
 .savebar__status small {
   font-weight: 400;

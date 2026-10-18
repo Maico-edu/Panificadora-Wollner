@@ -1,5 +1,6 @@
 /* Identidade visual da Wollner: vinho e dourado do logotipo, sobre fundo creme. */
 :root {
+  color-scheme: light;
   --wine-950: #2e0a0c;
   --wine-900: #3f1013;
   --wine-800: #5c1519;
@@ -12,6 +13,8 @@
   --cream-50: #fdf9f1;
   --cream-100: #f7efdf;
   --cream-200: #eadfc8;
+  --surface-card: #fff;
+  --surface-input: #fff;
   --ink-900: #2a1913;
   --ink-700: #4f3a31;
   --ink-500: #7a6559;
@@ -28,6 +31,22 @@
   --shadow-sm: 0 1px 2px rgba(46, 10, 12, 0.08), 0 2px 8px rgba(46, 10, 12, 0.06);
   --shadow-md: 0 8px 24px rgba(46, 10, 12, 0.14);
   --header-height: 68px;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --cream-50: #171516;
+  --cream-100: #211d1f;
+  --cream-200: #393234;
+  --surface-card: #292324;
+  --surface-input: #201b1d;
+  --ink-900: #f5eee9;
+  --ink-700: #dfd2cc;
+  --ink-500: #b5a7a1;
+  --gold-600: #e8b455;
+  --gold-100: #453923;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.24), 0 3px 10px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.38);
 }
 
 *,
@@ -48,6 +67,7 @@ body {
   line-height: 1.6;
   color: var(--ink-900);
   background: var(--cream-50);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 img {
@@ -68,6 +88,70 @@ h3 {
   margin: 0 0 0.5em;
   color: var(--wine-900);
   text-wrap: balance;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3 {
+  color: #fff5ed;
+}
+
+[data-theme='dark'] a:not(.btn):not(.brand) {
+  color: var(--gold-400);
+}
+
+[data-theme='dark'] .section--wine {
+  color: #fff5ed;
+}
+[data-theme='dark'] .section--wine h2,
+[data-theme='dark'] .section--wine h3,
+[data-theme='dark'] .page-header h1 {
+  color: #fff5ed;
+}
+[data-theme='dark'] .page-header p {
+  color: rgba(255, 245, 237, 0.84);
+}
+[data-theme='dark'] .btn--outline {
+  color: var(--gold-400);
+  border-color: var(--gold-400);
+}
+[data-theme='dark'] .btn--outline:hover {
+  color: #fff;
+  background: var(--wine-700);
+}
+[data-theme='dark'] .btn--outline-light {
+  color: #fff5ed;
+  border-color: rgba(255, 245, 237, 0.7);
+}
+[data-theme='dark'] .btn--outline-light:hover {
+  color: var(--wine-900);
+  background: #fff5ed;
+}
+[data-theme='dark'] .footer__brand,
+[data-theme='dark'] .slide__content,
+[data-theme='dark'] .slide__title,
+[data-theme='dark'] .hero__arrow,
+[data-theme='dark'] .hero__pause {
+  color: #fff5ed;
+}
+[data-theme='dark'] .slide__subtitle {
+  color: rgba(255, 245, 237, 0.92);
+}
+[data-theme='dark'] .facts dd,
+[data-theme='dark'] .adm-chip,
+[data-theme='dark'] .adm-badge--gold,
+[data-theme='dark'] .vars dt {
+  color: var(--gold-400);
+}
+[data-theme='dark'] .adm-badge--warn {
+  color: #ffd0a4;
+  background: #493520;
+}
+[data-theme='dark'] .adm-preview {
+  background: #1d3025;
+}
+[data-theme='dark'] .adm-warning {
+  color: #ffd0a4;
 }
 
 h1 {

@@ -210,17 +210,26 @@ watch(total, () => {
   padding-bottom: 72px;
   color: var(--cream-50);
 }
+[data-theme='dark'] .slide__content {
+  color: #fff5ed;
+}
 .slide__title {
   max-width: 14em;
   margin-bottom: 0.3em;
   font-size: clamp(1.9rem, 4.4vw, 3.1rem);
   color: var(--cream-50);
 }
+[data-theme='dark'] .slide__title {
+  color: #fff5ed;
+}
 .slide__subtitle {
   max-width: 34em;
   margin-bottom: 1.4em;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   color: rgba(253, 249, 241, 0.92);
+}
+[data-theme='dark'] .slide__subtitle {
+  color: rgba(255, 245, 237, 0.92);
 }
 
 .hero__arrow {
@@ -237,6 +246,9 @@ watch(total, () => {
   border: 1px solid rgba(253, 249, 241, 0.4);
   border-radius: 50%;
   cursor: pointer;
+}
+[data-theme='dark'] .hero__arrow {
+  color: #fff5ed;
 }
 .hero__arrow:hover {
   background: rgba(46, 10, 12, 0.8);

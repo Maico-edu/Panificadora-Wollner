@@ -138,7 +138,7 @@ function clearFilters() {
   max-width: 460px;
   padding: 0 14px;
   color: var(--ink-500);
-  background: #fff;
+  background: var(--surface-input);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius);
 }
@@ -170,7 +170,7 @@ function clearFilters() {
   padding: 6px 16px;
   font: 700 0.9rem var(--font-body);
   color: var(--ink-700);
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: 999px;
   cursor: pointer;

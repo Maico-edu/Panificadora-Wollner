@@ -138,6 +138,9 @@ const whatsappUrl = computed(() => whatsappUrlGeneral(content.value))
   font-size: 1.8rem;
   color: var(--wine-800);
 }
+[data-theme='dark'] .facts dd {
+  color: var(--gold-400);
+}
 .story__actions {
   display: flex;
   flex-wrap: wrap;
@@ -155,10 +158,13 @@ const whatsappUrl = computed(() => whatsappUrlGeneral(content.value))
 }
 .differentials li {
   padding: 20px;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-left: 4px solid var(--gold-500);
   border-radius: var(--radius);
+}
+[data-theme='dark'] .differentials li h3 {
+  color: #fff5ed;
 }
 .differentials p {
   margin: 0;

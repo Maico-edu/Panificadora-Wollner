@@ -85,7 +85,7 @@ async function onFile(event) {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--cream-100);
-  border: 1px solid #cfc3ab;
+  border: 1px solid var(--cream-200);
   border-radius: var(--radius);
 }
 .imgf__preview img {

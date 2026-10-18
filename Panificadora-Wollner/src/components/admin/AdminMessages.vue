@@ -113,6 +113,9 @@ async function removeTemplate(template, index) {
   font-weight: 700;
   color: var(--wine-800);
 }
+[data-theme='dark'] .vars dt {
+  color: var(--gold-400);
+}
 .vars dd {
   margin: 0;
   font-size: 0.88rem;

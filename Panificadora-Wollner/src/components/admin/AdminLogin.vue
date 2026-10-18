@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import ThemeToggle from '../ThemeToggle.vue'
 import { useAdmin } from '../../stores/admin.js'
 
 const { login, authMessage } = useAdmin()
@@ -18,6 +19,7 @@ async function submit() {
 
 <template>
   <div class="login">
+    <ThemeToggle class="login__theme" />
     <form class="login__card" @submit.prevent="submit">
       <img src="/images/logo-wollner.png" alt="" width="72" height="72" />
       <h1>Painel da Wollner</h1>
@@ -50,13 +52,18 @@ async function submit() {
   min-height: 100vh;
   padding: 20px;
 }
+.login__theme {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+}
 .login__card {
   display: grid;
   gap: 14px;
   width: min(400px, 100%);
   padding: 32px 28px;
   text-align: center;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -84,6 +91,10 @@ async function submit() {
   color: var(--danger);
   background: #fdecea;
   border-radius: var(--radius);
+}
+[data-theme='dark'] .login__error {
+  color: #ffc2bd;
+  background: #462829;
 }
 .login__submit {
   width: 100%;

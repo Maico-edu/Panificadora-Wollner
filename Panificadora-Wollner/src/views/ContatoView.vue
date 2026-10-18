@@ -76,7 +76,7 @@ const whatsappUrl = computed(() => whatsappUrlGeneral(content.value))
   display: flex;
   gap: 16px;
   padding: 20px;
-  background: #fff;
+  background: var(--surface-card);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius-lg);
 }

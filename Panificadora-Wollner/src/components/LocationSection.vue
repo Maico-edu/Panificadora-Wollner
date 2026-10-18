@@ -144,7 +144,7 @@ const whatsappUrl = computed(() => whatsappUrlGeneral(content.value))
   min-width: 0;
   padding: 10px 12px;
   font: 400 1rem var(--font-body);
-  background: #fff;
+  background: var(--surface-input);
   border: 1px solid var(--cream-200);
   border-radius: var(--radius);
 }

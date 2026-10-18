@@ -101,6 +101,9 @@ const whatsappUrl = computed(() => whatsappUrlGeneral(content.value))
   font-size: 1.25rem;
   color: var(--cream-50);
 }
+[data-theme='dark'] .footer__brand {
+  color: #fff5ed;
+}
 .footer__brand img {
   width: 56px;
   height: 56px;
