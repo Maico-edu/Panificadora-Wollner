@@ -1,0 +1,279 @@
+/* Estilos do painel administrativo (classes com prefixo adm-). */
+.adm {
+  min-height: 100vh;
+  color: var(--ink-900);
+  background: #f3eee4;
+}
+
+.adm-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--cream-200);
+  border-radius: var(--radius-lg);
+}
+.adm-card > h2,
+.adm-card > h3:first-child {
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+}
+.adm-help {
+  margin: 0 0 14px;
+  font-size: 0.88rem;
+  color: var(--ink-500);
+}
+
+.adm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+}
+.adm-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.adm-span {
+  grid-column: 1 / -1;
+}
+
+.adm-field {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-700);
+}
+.adm-field small {
+  font-weight: 400;
+  color: var(--ink-500);
+}
+.adm-field input[type='text'],
+.adm-field input[type='password'],
+.adm-field input[type='number'],
+.adm-field input[type='url'],
+.adm-field input[type='email'],
+.adm-field input[type='search'],
+.adm-field select,
+.adm-field textarea,
+.adm-input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  font: 400 1rem var(--font-body);
+  color: var(--ink-900);
+  background: #fff;
+  border: 1px solid #cfc3ab;
+  border-radius: var(--radius);
+}
+.adm-field textarea {
+  resize: vertical;
+}
+.adm-field input:focus,
+.adm-field select:focus,
+.adm-field textarea:focus,
+.adm-input:focus {
+  outline: none;
+  border-color: var(--gold-600);
+  box-shadow: 0 0 0 3px rgba(217, 154, 43, 0.3);
+}
+
+.adm-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.adm-check input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--wine-700);
+}
+.adm-check small {
+  display: block;
+  color: var(--ink-500);
+}
+.adm-checks {
+  display: grid;
+  gap: 12px;
+}
+
+.adm-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.adm-toolbar .adm-input {
+  width: auto;
+  min-width: 160px;
+  flex: 1;
+}
+
+.adm-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.adm-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--cream-200);
+}
+.adm-row:first-child {
+  border-top: 0;
+}
+.adm-row__thumb {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  background: var(--cream-100);
+  border-radius: var(--radius);
+}
+.adm-row__thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-500);
+}
+.adm-row__main {
+  flex: 1;
+  min-width: 0;
+}
+.adm-row__title {
+  margin: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.adm-row__meta {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-500);
+}
+.adm-row__actions {
+  display: flex;
+  flex: none;
+  gap: 6px;
+}
+
+.adm-iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--ink-700);
+  background: #fff;
+  border: 1px solid #cfc3ab;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.adm-iconbtn:hover:not([disabled]) {
+  background: var(--cream-100);
+}
+.adm-iconbtn[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.adm-iconbtn--danger {
+  color: var(--danger);
+  border-color: #e3b5b1;
+}
+
+.adm-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.adm-badge {
+  padding: 1px 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ink-700);
+  background: var(--cream-200);
+  border-radius: 999px;
+}
+.adm-badge--gold {
+  color: var(--wine-900);
+  background: var(--gold-100);
+}
+.adm-badge--warn {
+  color: #7a2a00;
+  background: #fde2c8;
+}
+
+.adm-empty {
+  padding: 28px 12px;
+  text-align: center;
+  color: var(--ink-500);
+}
+
+.adm-preview {
+  margin-top: 8px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  background: #f4fbf6;
+  border: 1px dashed #7ab98f;
+  border-radius: var(--radius);
+}
+.adm-preview strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--success);
+}
+.adm-preview p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.adm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.adm-chip {
+  padding: 3px 10px;
+  font: 700 0.78rem var(--font-body);
+  color: var(--wine-800);
+  background: var(--gold-100);
+  border: 1px solid var(--gold-400);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.adm-chip:hover {
+  background: var(--gold-400);
+}
+
+.adm-warning {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #7a2a00;
+}
+
+@media (max-width: 720px) {
+  .adm-grid,
+  .adm-grid--3 {
+    grid-template-columns: 1fr;
+  }
+  .adm-row {
+    flex-wrap: wrap;
+  }
+  .adm-row__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
